@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% block body %}
+<!-- can also use for to get all the properties of object Livre -->
+<ul>
+<li>{{livre.titre|capitalize}}</li>
+<li>{{livre.prix}}</li>
+<li>{{livre.description}}</li>
+<li>{{livre.nombrePages}}</li>
+<li>{{livre.datePublication|date("yy-m-d")}}</li>
+</ul>
+
+{% endblock %}

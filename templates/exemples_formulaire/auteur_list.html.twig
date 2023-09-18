@@ -1,0 +1,13 @@
+{% extends "base.html.twig" %}
+{% block body %}
+    <h1>Liste des auteurs</h1>
+    <ul>
+        {% for auteur in arrayObjetAuteurs %}
+            <li>{{ auteur.nom }}</li>
+            <li>{{ auteur.nationalite }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}
+
+

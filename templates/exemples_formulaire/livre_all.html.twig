@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+//afficher tous les livres
+<h1>Les livres</h1>
+
+{% for livre in arrayObjetLivres %}
+    <h3>{{ livre.titre }}</h3>
+     <ul>
+     <li>ISBN:{{ livre.isbn }}</li>
+     <li>Nombre de pages:{{ livre.nombrePages }}</li>
+     <li>Prix:{{ livre.prix }}</li>
+     <li>Description:{{ livre.description }}</li>
+     </ul>
+     <a href="{{ path('livre_fiche', {'id': livre.id}) }}">Afficher la fiche complete</a>
+    <a href="{{ path('livre_delete', {'id': livre.id}) }}">Effacer</a>
+    <a href="{{ path('livre_update', {'id': livre.id}) }}">Modifier</a>
+{% endfor %}
+
+{% endblock %}

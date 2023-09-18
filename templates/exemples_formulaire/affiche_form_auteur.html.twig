@@ -1,0 +1,10 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    {{ form_start(formAuteur) }}
+        {{ form_widget(formAuteur) }}
+        <input type="submit" value="Create" />
+    {{ form_end(formAuteur) }}
+
+{% endblock %}

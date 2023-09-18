@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+//afficher tous les clients
+<h1>Liste de les clients</h1>
+<ul>
+{% for client in arrayObjetClients %}
+     <li>{{ client.nom }}</li>
+     <li>{{ client.prenom }}</li>
+     <li>{{ client.email }}</li>
+{% endfor %}
+</ul>
+
+{% endblock %}
